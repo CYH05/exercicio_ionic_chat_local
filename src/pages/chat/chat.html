@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>chat</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<ion-card *ngFor="let objeto of objeto">
+    <ion-card-header>
+      {{objeto.name}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>
+      {{objeto.comment}}
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <div style="float: end; bottom: 15px">
+        <ion-item>
+          <ion-input [(ngModel)]="txtComment"  type="text"aria-colcount="1"></ion-input>
+        </ion-item>  
+        </div>        
+        <ion-fab end bottom>
+            <button ion-fab color="primary" (click)="sendClick()">
+              <ion-icon name="arrow-dropright"></ion-icon>
+            </button>
+          </ion-fab>
+</ion-content>

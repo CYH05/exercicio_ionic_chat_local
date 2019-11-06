@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic alone chat
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label>Name:</ion-label>
+          <ion-input [(ngModel)]="name">
+          </ion-input>
+        </ion-item>
+  <ion-item>
+  <ion-label>Topic</ion-label>
+    <ion-select [(ngModel)]="topic">
+      <ion-option value="film">Film</ion-option>
+      <ion-option value="sport">Sport</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button color="light" full class="ion-margin" (click)="clickToGo()">confirmar</button>
+</ion-content>
